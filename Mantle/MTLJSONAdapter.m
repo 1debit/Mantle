@@ -189,6 +189,10 @@ static NSString * const MTLJSONAdapterThrownExceptionErrorKey = @"MTLJSONAdapter
 				if ([value isEqual:NSNull.null]) value = nil;
 				value = [transformer transformedValue:value] ?: NSNull.null;
 			}
+            
+            else if(transformer == nil && [value isKindOfClass:[NSString class]] && [value isEqualToString:@"0"]){
+                value = @(NO);
+            }
 
 			dictionaryValue[propertyKey] = value;
 		} @catch (NSException *ex) {
