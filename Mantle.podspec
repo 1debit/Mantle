@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary       = "Model framework for Cocoa and Cocoa Touch."  
   s.homepage      = "https://github.com/1debit/Mantle"
   s.license       = { :type => 'MIT', :file => 'LICENSE' }
-  s.source        = { :git => "https://github.com/1debit/Mantle.git", :tag => s.version.to_s }
+  s.source        = { :git => "https://github.com/1debit/Mantle.git"}
   s.author        = { "us" => "us@gmail.com" }
 
   s.framework     = 'Foundation'
